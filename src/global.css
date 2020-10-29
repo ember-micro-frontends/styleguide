@@ -5,9 +5,11 @@
   --color-warning: #ff9f1c;
   --color-info: #2ec4b6;
   --color-background: #182b3a;
-  --color-white: #fdfffc;
   --color-black: #171817;
   --color-overlay: rgba(253, 255, 252, 0.8);
+  --color-ember: #e04e39;
+  --color-burnt-ember: #9b2918;
+  --color-white: #fdfdfd;
 }
 
 @tailwind base;
@@ -17,7 +19,7 @@
 @tailwind utilities;
 
 body {
-  background-color: var(--color-background);
+  background-color: var(--color-ember);
   color: var(--color-white);
 }
 
@@ -26,4 +28,29 @@ nav.topnav {
   width: 100vw;
   top: 0px;
   z-index: 100;
+}
+
+.bg-burnt-ember {
+  background: var(--color-burnt-ember);
+}
+
+nav a:hover,
+nav a.active:hover {
+  background: var(--color-white);
+  color: var(--color-ember);
+}
+
+nav a.active {
+  background: var(--color-ember);
+}
+
+.people-list a:hover,
+.people-list a.active:hover {
+  background: var(--color-white);
+  color: var(--color-ember);
+}
+
+.people-list a.active {
+  background: var(--color-white);
+  color: var(--color-ember);
 }
